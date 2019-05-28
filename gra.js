@@ -8,7 +8,7 @@ var snake;
 var rozmiar = 10;
 var jedzenie;
 var materialy = (function () {
-	var cialo = function (x,y0 {
+	var cialo = function (x,y) {
 		// pojedynczy kwadracik
 		ctx.fillStyle = 'red';
 		ctx.fillRect(x*rozmiar, y*rozmiar, rozmiar, rozmiar);
@@ -77,5 +77,15 @@ else if (direction =='up') {
 snakeY--;}
 else if (direction == 'down'){
 snakeY++ ;   }
-}
+if ( snakeX == -1 || snakeX == w/rozmiar || snakeY == -1 || snakeY == h/rozmiar || kolizja(snakeX, snakeY, snake))
+{
+ // przerywamy grę
+ // ponownie przycisk startu staje się dostepny
+btn.removeAttribute('disabled', true);
+ // czyscimy cały canvas
+ctx.clearRect(0, 0 ,w ,h);
+gameloop = clearInterval(gameloop);
+return;
+ 
+	
 
