@@ -31,7 +31,7 @@ var materialy = (function () {
 		ctx.fillStyle = 'pink';
 		ctx.fillText(wynik_tekst, 145, h-5);
 	}
-var poruszanie = function() {
+	var poruszanie = function() {
 	// poruszanie sie węża jako tablicy.
 	var length = 4;
 	snake = [];
@@ -86,6 +86,7 @@ btn.removeAttribute('disabled', true);
 ctx.clearRect(0, 0 ,w ,h);
 gameloop = clearInterval(gameloop);
 return;
+}
  
 	
 
