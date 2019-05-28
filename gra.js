@@ -26,6 +26,7 @@ var materialy = (function () {
 	}
 	
 	var tablicapkt = function(){
+		//  tablica wynikow i jej pozycja 
 		var wynik_tekst = "Score: " + wynik;
 		ctx.fillStyle = 'pink';
 		ctx.fillText(wynik_tekst, 145, h-5);
@@ -44,6 +45,7 @@ var twjedzenia = function () {
 	y: Math.floor((Math.random()*30)+1)
 	}
 	// na  podstawie polozenia węża będzie stwarzało jedzenie
+	//nie moze stworzyc jedzenie gdy posiada te samą pozycje co wąż, dlatego trzeba napisać obejscie
 	for (var i=0; i>snake.length; i++){
 		var snakeX = snake[i].x;
 		var snakeY = snake[i].y;
