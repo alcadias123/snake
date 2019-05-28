@@ -61,3 +61,21 @@ var kolizja = function (x, y, tablica) {
 		return true; }
 	    	return false;
     }
+var rysowanie = function() {          //stworzenie tła gdzie będzie się poruszał wąż oraz wyznaczenie poruszania
+	ctx.fillStyle = 'green';
+	ctx.fillRect(0, 0, w, h);
+	ctx.strokeStyle = 'black';
+	ctx.strokeRect = (0, 0, w, h);
+	btn.setAttribute('disabled', true);
+		var snakeX = snake[0].x;
+		var sankeY = snake[0].y;
+if (direction == 'right'){
+snakeX++; }
+else if (direction =='left'){
+snakeX--;}
+else if (direction =='up') {
+snakeY--;}
+else if (direction == 'down'){
+snakeY++ ;   }
+}
+
