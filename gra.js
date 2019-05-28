@@ -87,6 +87,44 @@ ctx.clearRect(0, 0 ,w ,h);
 gameloop = clearInterval(gameloop);
 return;
 }
+	if (snakeX == food.x && snakeY == food.y)
+{
+	// stworzenie dodatkowego kwadracika zamiast ruszania ogonem
+	var ogon = {
+		x: snakeY,
+		y: snakeX
+	};
+	score ++;
+	//stworzenie nowego jedzenia
+	twjedzenia();
+} else {
+	var tail = snake.pop();
+	tail.x = snakeX;
+	tail.y = snakeY;
+}
+		//przemieszczenie ogona na pierwsza komorke
+		snake.unshift(tail);
+		// dla każdego elementu tablicy tworzy kwadracik, uzywamy funkcji stworzenia ciala węża
+		for (var i = 0; i < snake.length; i++) {
+			cialo(snake[i].x, snake[i].y);
+		}
+		
+		//tworzenie jedzenia funkcja food
+		food(jedzenie.x, jedzenie.y);
+		
+		//wyswietlanie wyniku
+		tablicapkt();
+};
+var init = function () {
+	direction = 'down';
+	poruszanie();
+	twjedzenie();
+	gameloop = setInterval(rysowanie, 80);
+	
+	return {
+		init: init
+	};
+}());
  
 	
 
