@@ -55,3 +55,9 @@ var twjedzenia = function () {
 		}
 	}
 }
+var kolizja = function (x, y, tablica) {
+	for(var i=0; i<tablica.length; i++) {
+		if(tablica[i].x === x && tablica[i].y === y) //sprawdzenie czy wąż uderza samego siebie, jeżeli tak zwraca prawde jezeli nie fałsz.
+		return true; }
+	    	return false;
+    }
