@@ -1,1 +1,37 @@
 
+#box {
+	width: 350px;
+	height: 350px;
+	background-image: url('snake.jpg');
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0;
+}
+
+button {
+	background-color: blue;
+	color: white;
+	border: none;
+	height: 40px;
+	font-size: 15pt;
+	float: left;
+	width: 92px;
+	margin: 10px 0 0 0 ;
+}
+button:hover {
+	background-color: grey;
+}
+button:disabled {
+	background-color: orange;
+}
+p {
+	font-family: Helvetica;
+      font-weight: bold;
+      width: 250px;
+      margin: 18px 0 5px 8px;
+      float: left;
+} 
+.gra {
+	margin: 0 auto;
+}
