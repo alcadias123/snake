@@ -2,14 +2,22 @@
 <html>
 <head>
 <title> Snake Game </title>
-<meta charset = "utf-9">
+<meta charset = "utf-8">
 <link rel = "stylesheet" href= "style.css" type = "text/css">
-<script src = "gra.js"></script>
 </head>
 <body>
-<button id = 'przycisk'>Startuj!</button>
-<div id="box">
+<div class = "gra">
+	<div id='box'>
+		<canvas id = 'canvas' width = "350" height = "350">
+		</canvas> 
+	</div>
+	<p>Let's start the game and collect the points </p>
+	<button id = 'przycisk'>Startuj!</button>
+	</div>
 </div>
-<canvas id = "snake" width = "350" height = "350"></canvas>  
+<script src = "zmienne.js"></script>
+<script src = "rysowanie.js"></script>
+<script src = "gra.js"</script>
 </body>
 </html>
+
