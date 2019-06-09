@@ -1,9 +1,10 @@
-var mcan = document.getElementById('canvas');
-var ctx = mcan.getContext('2d');
-var rozmiar = 10;
-var w = 350;
-var h = 350;
+
+var mycanvas = document.getElementById('mycanvas');
+var ctx = mycanvas.getContext('2d');
+var snakeSize = 10; 
+var w = 600;
+var h = 400;
 var score = 0;
 var snake;
-var rozmiar = 10;
+var snakeSize = 10;
 var jedzenie;
