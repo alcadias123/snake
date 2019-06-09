@@ -1,6 +1,6 @@
 (function (window, document, materialy, undefined) {
 	
-	var btn = document.getElementById('przycisk');
+	var btn = document.getElementById('btn');
 	btn.addEventListener("click", function(){  materialy.init();  });
 	
 			document.onkeydown = function (event) {
