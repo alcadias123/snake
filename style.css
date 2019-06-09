@@ -1,45 +1,47 @@
-h1 {
-text-align: center;
-font-size: 100px;
-}
+#home {
+      width: 600px;
+      height: 400px;
+      background-image: url('../img/snake.png');
+      background-size: auto 250px;
+      background-repeat: no-repeat;
+      background-color: lightblue;
+      background-position: center center;
+      padding: 0;
+      margin-left: 300px;
 
-#box {
-	width: 350px;
-	height: 350px;
-	background-image: url('snake.jpg');
-	background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center;
-	padding: 0;
-}
+    }
+    
+    button {
+      background-color: green;
+      color: white;
+      border: none;
+      bottom: 0;
+      height: 30px;
+      font-size: 12pt;
+      float: left;
+      width: 90px;
+      margin: 10px 0 0 300;
+    }
+    button:hover {
+      background-color: orange;
+    }
 
-button {
-	background-color: blue;
-	color: white;
-	border: none;
-	height: 40px;
-	font-size: 15pt;
-	float: left;
-	width: 92px;
-	margin: 10px 0 0 0 ;
-}
-button:hover {
-	background-color: grey;
-}
-button:disabled {
-	background-color: orange;
-}
-p {
-	font-family: Helvetica;
+    button:disabled {
+      background-color: grey;
+    }
+
+    p {
+      font-family: Helvetica;
       font-weight: bold;
       width: 250px;
       margin: 18px 0 5px 8px;
       float: left;
-} 
-.gra {
-	background-color: green;
-	margin: 200px 0 0 0;
-body {
-background-image: radial-gradient(circle, pink, purple, red);
-}
+    }
 
+    .game {
+      margin: 0 auto;
+    }
+
+	body {
+	background-color: lightpink ;
+	}
