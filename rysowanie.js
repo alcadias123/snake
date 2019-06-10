@@ -81,6 +81,7 @@ var rys = (function () {
         
         jedzonko(food.x, food.y); 
         wynik();
+	przeszkody(przeszkoda.x, przeszkoda.y);
   }
 
   var twjedzenia = function() {
@@ -121,6 +122,7 @@ var rys = (function () {
       direction = 'down';
       rysSnake();
       twjedzenia();
+      twprzeszkod();	
       gameloop = setInterval(paint, 80);
   }
 
