@@ -8,3 +8,4 @@ var score = 0;
 var snake;
 var snakeSize = 10;
 var jedzenie;
+var p = new Array;
