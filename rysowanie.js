@@ -14,11 +14,20 @@ var rys = (function () {
         ctx.fillRect(x*snakeSize+1, y*snakeSize+1, snakeSize-2, snakeSize-2);
   }
   var przeszkody = function(x, y) {
-        ctx.fillStyle = 'black';
-        ctx.fillRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
-	  
+    this.x = Math.floor((Math.random() * 600)+1);
+    this.y = Math.floor((Math.random() * 400)+1);
+    this.rysuj = function(){
+      ctx.beginPath();
+      ctx.fillStyle = 'black';
+      ctx.rect(this.x,this.y,snakeSize,snakeSize); 
+      ctx.stroke();
+      ctx.fill();
+    }
   }
-
+  for(var i = 0;i<10;i++)
+  {
+    p[i] = new przeszkody;
+  }
   var wynik = function() {
     var wynik_text = "Score: " + score;
     ctx.fillStyle = 'black';
@@ -81,7 +90,6 @@ var rys = (function () {
         
         jedzonko(food.x, food.y); 
         wynik();
-	przeszkody(przeszkoda.x, przeszkoda.y);
   }
 
   var twjedzenia = function() {
@@ -101,14 +109,6 @@ var rys = (function () {
       }
   }
   
- var twprzeszkod = function() {
-	
-	  	przeszkoda = {			
-		  x: Math.floor((Math.random() * 20)+1) ,
-		  y: Math.floor((Math.random() * 20)+1)
-	  }
-	
- }
 
   var kolizja = function(x, y, array) {
       for(var i = 0; i < array.length; i++) {
@@ -122,7 +122,10 @@ var rys = (function () {
       direction = 'down';
       rysSnake();
       twjedzenia();
-      twprzeszkod();	
+      for(var i = 0;i<10;i++)
+      {
+        p[i].rysuj();
+      }
       gameloop = setInterval(paint, 80);
   }
 
