@@ -13,6 +13,11 @@ var rys = (function () {
         ctx.fillStyle = 'red';
         ctx.fillRect(x*snakeSize+1, y*snakeSize+1, snakeSize-2, snakeSize-2);
   }
+  var przeszkody = function(x, y) {
+        ctx.fillStyle = 'black';
+        ctx.fillRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
+	  
+  }
 
   var wynik = function() {
     var wynik_text = "Score: " + score;
@@ -94,6 +99,15 @@ var rys = (function () {
         }
       }
   }
+  
+ var twprzeszkod = function() {
+	
+	  	przeszkoda = {			
+		  x: Math.floor((Math.random() * 20)+1) ,
+		  y: Math.floor((Math.random() * 20)+1)
+	  }
+	
+ }
 
   var kolizja = function(x, y, array) {
       for(var i = 0; i < array.length; i++) {
